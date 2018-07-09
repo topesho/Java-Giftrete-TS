@@ -1,11 +1,10 @@
 Feature: In order to use the website I need to register
 
-
   Background:
     Given I navigate to "https://dev.giftrt.com/"
     When I click on register
 
-
+  @valid
   Scenario: Valid Registration
     And I enter my first name
     And I enter my last name
@@ -15,7 +14,7 @@ Feature: In order to use the website I need to register
     And I click sign up button
     Then I should be registered
 
-
+  @invalid
   Scenario: Registration with invalid email
     And I enter my first name
     And I enter my last name
@@ -25,7 +24,7 @@ Feature: In order to use the website I need to register
     And I click sign up button
     Then I should be registered
 
-
+  @valid
   Scenario: Valid Registration with parameters
     And I enter my first name "tope"
     And I enter my last name "shodeinde"
@@ -34,7 +33,7 @@ Feature: In order to use the website I need to register
     And I confirm my password "tope81"
     And I click sign up button
     Then I should be registered
-
+  @invalid
   Scenario Outline: Registration with invalid credentials
     And I enter my first name
     And I enter my last name

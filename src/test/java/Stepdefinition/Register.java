@@ -5,12 +5,22 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Register {
     @Given("^I navigate to \"([^\"]*)\"$")
-    public void iNavigateTo(String arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        //throw new PendingException();
+    public void iNavigateTo(String giftrt) throws Throwable {
+        System.setProperty("webdriver.gecko.driver","C:\\Users\\Topesho\\Documents\\Java Training\\src\\test\\resources\\Feature\\GeckoDriver.exe");
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\Topesho\\Documents\\FirstWeb\\src\\test\\chromedriver.exe");
+
+        //WebDriver Driver = new ChromeDriver();
+        WebDriver Driver = new FirefoxDriver();
+        Driver.navigate().to("https://dev.giftrt.com/");
+
+        Driver.close();
+
     }
 
     @When("^I click on register$")
@@ -68,31 +78,31 @@ public class Register {
     }
 
     @And("^I enter my first name \"([^\"]*)\"$")
-    public void iEnterMyFirstName(String arg0) throws Throwable {
+    public void iEnterMyFirstName(String firstname) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         //throw new PendingException();
     }
 
     @And("^I enter my last name \"([^\"]*)\"$")
-    public void iEnterMyLastName(String arg0) throws Throwable {
+    public void iEnterMyLastName(String lastname) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         //throw new PendingException();
     }
 
     @And("^I enter my email \"([^\"]*)\"$")
-    public void iEnterMyEmail(String arg0) throws Throwable {
+    public void iEnterMyEmail(String email) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         //throw new PendingException();
     }
 
     @And("^I enter my password\"([^\"]*)\"$")
-    public void iEnterMyPassword(String arg0) throws Throwable {
+    public void iEnterMyPassword(String password) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         //throw new PendingException();
     }
 
     @And("^I confirm my password \"([^\"]*)\"$")
-    public void iConfirmMyPassword(String arg0) throws Throwable {
+    public void iConfirmMyPassword(String password) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         //throw new PendingException();
     }

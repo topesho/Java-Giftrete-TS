@@ -5,28 +5,28 @@ Feature: Login
     Given I navigate to "https://dev.giftrt.com/"
     When I click on login button
 
-
+  @valid
   Scenario: Login
     And I enter my email
     And I enter my password
     And I click the signin button
     Then I should be logged in
 
-
+  @valid
   Scenario: Login with parameters
     And I enter my email "topy_sho@yahoo.com"
     And I enter my password"tope81"
     And I click the signin button
     Then I should be logged in
 
-
+  @invalid
   Scenario: Invalid Login
     And I enter my invalid email
     And I enter my password
     And I click the signin button
     Then I should not be logged in
 
-
+  @invalid
   Scenario Outline: Logging with Invalid details
     When I enter my email
     And I enter my password
