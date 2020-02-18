@@ -36,5 +36,5 @@ Feature: Login
 
     Examples:
       | email              | password | warning |
-      | topy_sho@yahoo.com |          | Please fill in this field.|
-      | topy_shoyahoo.com  | tope81   | The Email field must contain a valid email address.|
+      | topy_xxx@yahoo.com |          | Please fill in this field.|
+      | topy_xxx.com  | xxx  | The Email field must contain a valid email address.|
